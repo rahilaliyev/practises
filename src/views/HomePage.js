@@ -16,6 +16,8 @@ const HomePage = () => {
         <br />
         <Link to="/framer">Go to Framer</Link>
         <Link to="/borderImage">Go to BorderImage</Link>
+        <br/>
+        <Link to="/hammer">Go to Hammer</Link>
       </div>
     </motion.div>
   );

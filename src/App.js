@@ -5,12 +5,13 @@ import BasicsPage from "./views/BasicsPage";
 import DashboardPage from "./views/DashboardPage";
 import FramerPage from "./views/FramerPage";
 import BorderImage from "./views/BorderImage";
-import { AnimatePresence } from "framer-motion";
+import Hammer from "./views/Hammer/Hammer";
+
 
 const App = () => {
   const location = useLocation();
   return (
-    // <AnimatePresence exitBeforeEnter>
+   
     <Switch location={location} key={location.pathname}>
       <Route exact path="/">
         <HomePage />
@@ -26,6 +27,9 @@ const App = () => {
       </Route>
       <Route path="/borderImage">
         <BorderImage />
+      </Route>
+      <Route path="/hammer">
+        <Hammer />
       </Route>
     </Switch>
     // </AnimatePresence>
