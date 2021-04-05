@@ -1,0 +1,16 @@
+.box {
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+
+.green {
+    background-color: green;
+}
+
+.grey {
+    background-color: grey;
+}
+.orange {
+    background-color: orange;
+}

@@ -1,0 +1,49 @@
+.main-disks {
+  overflow: hidden;
+  width: 500px;
+}
+
+.main {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.slider-item {
+  width: 500px;
+  height: 600px;
+  margin-right: 50px;
+  scroll-snap-align: start;
+}
+
+.img {
+  flex-shrink: 0;
+  width: 500px;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img1 {
+  background-image: url(../../image/image1.jpg);
+}
+
+.img2 {
+  background-image: url(../../image/image2.jpg);
+}
+
+.img3 {
+  background-image: url(../../image/image3.jpg);
+}
+.center {
+  background-color: white;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}

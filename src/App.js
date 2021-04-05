@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Switch, Route, useLocation } from "react-router-dom";
+import HomePage from "./views/HomePage";
+import BasicsPage from "./views/BasicsPage";
+import DashboardPage from "./views/DashboardPage";
+import FramerPage from "./views/FramerPage";
+import BorderImage from "./views/BorderImage";
+import { AnimatePresence } from "framer-motion";
 
-function App() {
+const App = () => {
+  const location = useLocation();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <AnimatePresence exitBeforeEnter>
+    <Switch location={location} key={location.pathname}>
+      <Route exact path="/">
+        <HomePage />
+      </Route>
+      <Route path="/basics">
+        <BasicsPage />
+      </Route>
+      <Route path="/dashboard">
+        <DashboardPage />
+      </Route>
+      <Route path="/framer">
+        <FramerPage />
+      </Route>
+      <Route path="/borderImage">
+        <BorderImage />
+      </Route>
+    </Switch>
+    // </AnimatePresence>
   );
-}
+};
 
 export default App;
